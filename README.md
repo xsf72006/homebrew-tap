@@ -1,4 +1,4 @@
-# homebrew-myclip
+# homebrew-tap
 
 Homebrew tap for [myclip](https://github.com/xsf72006/myclip) — a lightweight
 native macOS clipboard history with a configurable global hotkey.
@@ -6,7 +6,7 @@ native macOS clipboard history with a configurable global hotkey.
 ## Install
 
 ```sh
-brew tap xsf72006/myclip
+brew tap xsf72006/tap
 brew install --cask myclip
 ```
 
@@ -28,5 +28,5 @@ brew upgrade --cask myclip
 ```sh
 brew uninstall --cask myclip            # remove the app
 brew uninstall --cask --zap myclip      # also remove ~/Library/Application Support/myclip
-brew untap xsf72006/myclip              # remove this tap
+brew untap xsf72006/tap                 # remove this tap
 ```
