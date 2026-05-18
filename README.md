@@ -1,32 +1,49 @@
 # homebrew-tap
 
-Homebrew tap for [myclip](https://github.com/xsf72006/myclip) — a lightweight
-native macOS clipboard history with a configurable global hotkey.
-
-## Install
+Personal Homebrew tap for [@xsf72006](https://github.com/xsf72006)'s macOS
+apps and CLI tools. Add it once, install anything in the table below by
+name.
 
 ```sh
 brew tap xsf72006/tap
-brew install --cask myclip
+brew install --cask <name>   # for GUI apps in Casks/
+brew install <name>          # for CLI tools / libs in Formula/
 ```
 
-That's it. The cask drops `myclip.app` into `/Applications/`, strips the
-quarantine attribute so Gatekeeper doesn't block the ad-hoc-signed binary,
-and launches it once so it registers itself as a Login Item (configurable
-in the app's Settings).
+## What's in here
 
-Press **⌘⇧C** to open the panel.
+### Casks (GUI apps)
 
-## Update
+| Cask | Source | Description |
+| ---- | ------ | ----------- |
+| [`myclip`](Casks/myclip.rb) | [xsf72006/myclip](https://github.com/xsf72006/myclip) | Lightweight clipboard history with a configurable global hotkey |
+
+### Formulae (CLI tools)
+
+_(none yet)_
+
+## Updating
 
 ```sh
-brew upgrade --cask myclip
+brew update
+brew upgrade --cask <name>
+# or
+brew upgrade <name>
 ```
 
-## Uninstall
+`brew update` refreshes this tap; `brew upgrade` actually swaps the binary.
+
+## Uninstalling
 
 ```sh
-brew uninstall --cask myclip            # remove the app
-brew uninstall --cask --zap myclip      # also remove ~/Library/Application Support/myclip
-brew untap xsf72006/tap                 # remove this tap
+brew uninstall --cask <name>             # remove the app
+brew uninstall --cask --zap <name>       # also remove its support files / prefs
+brew untap xsf72006/tap                  # remove this tap entirely
 ```
+
+## Notes for the maintainer
+
+Each cask/formula has its own source repo. Their release workflows push
+updates here automatically via a `TAP_PUSH_TOKEN` secret — see the
+"Adding a new project to the tap" section in `xsf72006/myclip`'s personal
+RUNBOOK for the recipe.
