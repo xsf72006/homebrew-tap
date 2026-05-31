@@ -1,6 +1,6 @@
 cask "myclip" do
-  version "0.3.0"
-  sha256 "fe70473b0ca9b10bd8e9b3a655cbdfe990546a92a1b1e2c0a664760a4f0aea44"
+  version "0.3.1"
+  sha256 "ce5caf1d270ae9292a541dec1e20f443509c14be901746fd6157803bf70a3d53"
 
   url "https://github.com/xsf72006/myclip/releases/download/v#{version}/myclip-#{version}.zip"
   name "myclip"
